@@ -1,0 +1,19 @@
+@import "variaveis.scss";
+
+* {
+    font-family: "Roboto";
+    font-style: normal;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: $white;
+}
+
+#root {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}

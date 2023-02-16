@@ -1,0 +1,384 @@
+@import "../../../styles/variaveis.scss";
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    background: $black;
+    position: absolute;
+
+    @media (min-width: 2500px) {
+        height: 162px;
+    }
+    @media (max-width: 1025px) {
+        height: 139px;
+        justify-content: flex-start;
+    }
+    @media (max-width: 376px) {
+        height: 139.01px;
+    }
+}
+
+//Header Content Top
+.Header__Top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 84.378%;
+    height: 76px;
+    margin: 0 auto;
+    padding-left: 0px;
+    background: $black;
+    list-style: none;
+    @media (min-width: 2500px) {
+        width: 92.002%;
+        height: 101px;
+    }
+    @media (max-width: 1025px) {
+        width: 96.852%;
+    }
+    @media (max-width: 376px) {
+        width: 91.284%;
+    }
+    .Header__Button {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        @media (max-width: 1025px) {
+            width: 28px;
+            height: 22.5px;
+            display: block;
+        }
+        @media (min-width: 1026px) {
+            display: none;
+        }
+        & .Icon__Menu {
+            display: none;
+            @media (max-width: 1025px) {
+                width: 28px;
+                height: 22.5px;
+                display: block;
+            }
+        }
+        & .Icon__Menu__Closed {
+            display: none;
+            @media (max-width: 1025px) {
+                width: 15px;
+                height: 15px;
+                display: block;
+            }
+        }
+    }
+    .Logo {
+        width: 12.589%;
+        height: 25.87px;
+        list-style: none;
+        display: flex;
+        @media (min-width: 2500px) {
+            width: 11.545%;
+            height: 50.5px;
+        }
+        @media (max-width: 1025px) {
+            left: 0;
+            position: relative;
+            width: 13.707%;
+            height: 25.87px;
+        }
+        @media (max-width: 1023px) and (min-width: 377px) {
+            width: auto;
+            height: 25.87px;
+        }
+        @media (max-width: 376px) {
+            width: 39.563%;
+        }
+        & a {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            @media (max-width: 1025px) {
+                width: 100%;
+            }
+            & img {
+                width: 100%;
+                height: 25.87px;
+                @media (min-width: 2501px) {
+                    width: auto;
+                }
+                @media (min-width: 2500px) {
+                    height: 50.5px;
+                }
+                @media (max-width: 2500px) and (min-width: 1281px) {
+                    width: auto;
+                }
+                @media (max-width: 1025px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .Search__Bar {
+        width: calc(100% - 81.395%);
+        height: 12.99px;
+        background: $white;
+        border: 2px solid $primary-700;
+        border-radius: 5px;
+        padding: 8px 44px 8px 16px;
+        background-image: url("../assets/icons/magnifying-glass.svg");
+        background-repeat: no-repeat;
+        background-position: bottom 50% right 16px;
+        background-size: 18px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: $primary-500;
+        @media (min-width: 2500px) {
+            width: 18.956%;
+            height: 32.13px;
+            padding: 11px 60px 10.85px 16.47px;
+            background-position: bottom 50% right 10.85px;
+            background-size: 35.15px;
+            font-size: 28px;
+            line-height: 33px;
+        }
+        @media (max-width: 1025px) {
+            width: calc(100% - 63.01px);
+            height: 16.99px;
+            position: absolute;
+            top: 78px;
+        }
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: $primary-500;
+            @media (min-width: 2500px) {
+                font-size: 28px;
+                line-height: 33px;
+            }
+        }
+    }
+
+    .Menu__Header__Top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 12.589%;
+        padding: 0;
+        @media (min-width: 2500px) {
+            width: 9.331%;
+        }
+        @media (max-width: 2500px) and (min-width: 1281px) {
+            justify-content: end;
+        }
+        @media (max-width: 1025px) {
+            justify-content: flex-end;
+            width: auto;
+        }
+        & .List__Login {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            height: auto;
+            width: auto;
+            @media (max-width: 2500px) and (min-width: 1281px) {
+                &:first-child {
+                    margin-right: 55px;
+                }
+            }
+            @media (max-width: 1025px) {
+                position: absolute;
+                top: 0;
+                z-index: 3;
+                left: -16px;
+                height: 78px;
+                width: 99.597%;
+                transform: translateX(-100%);
+                transition: 0.5s ease-in-out;
+                background: $black;
+            }
+            & a {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                text-transform: uppercase;
+                color: $white;
+                text-decoration: none;
+                @media (min-width: 2500px) {
+                    font-size: 28px;
+                    line-height: 33px;
+                }
+                @media (max-width: 1025px) {
+                    position: relative;
+                    left: 16px;
+                }
+            }
+            .Closed {
+                width: 15px;
+                height: 15px;
+                @media (max-width: 1025px) {
+                    position: absolute;
+                    right: 16px;
+                    bottom: 31px;
+                }
+            }
+        }
+        & .List__Login.opened {
+            @media (max-width: 1025px) {
+                position: absolute;
+                z-index: 3;
+                width: 99.597%;
+                left: -16.01px;
+                transform: translateX(0);
+                transition: 0.5s ease-in-out;
+            }
+            @media (max-width: 376px) {
+                width: 98.834%;
+            }
+        }
+        & .List__Cart {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            height: auto;
+            width: auto;
+            & .cart__content--link {
+                width: 28px;
+                height: 28px;
+                @media (min-width: 2500px) {
+                    width: 54.68px;
+                    height: 54.68px;
+                }
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//Header Content Bottom
+.Header__Bottom {
+    border-top: 1px solid $primary-600;
+    width: auto;
+    height: 43.01px;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: $black;
+    @media (min-width: 2500px) {
+        height: 60.24px;
+    }
+    @media (max-width: 1025px) {
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: 0.5s ease-in-out;
+        background: rgba(69, 69, 69, 0.7);
+        position: fixed;
+        top: 0;
+        border-top-width: 0px;
+        z-index: 2;
+    }
+    .Nav__Bar {
+        padding-left: 0;
+        width: 84.378%;
+        display: flex;
+        align-items: center;
+        @media (min-width: 2500px) {
+            width: 92.002%;
+            height: 61px;
+        }
+        @media (max-width: 1025px) {
+            width: 96.484375%;
+            max-height: 585px;
+            transform: translateX(-100%);
+            transition: 0.5s ease-in-out;
+            align-items: flex-start;
+            left: -18px;
+            position: relative;
+        }
+        & ul {
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style: none;
+            @media (max-width: 1025px) {
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                position: relative;
+                top: 109px;
+                row-gap: 12px;
+            }
+            & li:not(:nth-child(3n)) {
+                margin-right: 55px;
+                @media (min-width: 2500px) {
+                    margin-right: 55.71px;
+                }
+            }
+            & li {
+                list-style: none;
+                & a {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 16px;
+                    text-transform: uppercase;
+                    color: $white;
+                    text-decoration: none;
+                    @media (min-width: 2500px) {
+                        font-size: 28px;
+                        line-height: 33px;
+                    }
+                    @media (max-width: 1025px) {
+                        font-size: 14px;
+                        line-height: 16px;
+                        text-transform: uppercase;
+                        color: $primary-600;
+                    }
+                }
+            }
+        }
+    }
+    .Nav__Bar.opened {
+        @media (max-width: 1025px) {
+            width: 96.462%;
+            max-height: 585px;
+            transform: translateX(0);
+            transition: 0.5s ease-in-out;
+            background: $white;
+            position: relative;
+            right: 18px;
+        }
+        @media (max-width: 376px) {
+            width: 90.22%;
+        }
+        ul {
+            @media (max-width: 1025px) {
+                position: relative;
+                left: 16px;
+                row-gap: 12px;
+            }
+        }
+    }
+}
+.Header__Bottom.opened {
+    @media (max-width: 1025px) {
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        transform: translateX(0);
+        transition: 0.5s ease-in-out;
+        background: rgba(69, 69, 69, 0.7);
+        border-top-width: 0px;
+    }
+}
